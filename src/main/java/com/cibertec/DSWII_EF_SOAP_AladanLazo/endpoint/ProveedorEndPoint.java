@@ -11,7 +11,7 @@ import com.cibertec.DSWII_EF_SOAP_AladanLazo.service.IProveedorService;
 @Endpoint
 public class ProveedorEndPoint {
 
-    private static final String NAMESPACE_URI = "http://www.cibertec.edu.pe/ws/objects";
+    private static final String NAMESPACE_URI = "http://www.cibertec.com/ws/objects";
 
     @Autowired
     private IProveedorService proveedorService;

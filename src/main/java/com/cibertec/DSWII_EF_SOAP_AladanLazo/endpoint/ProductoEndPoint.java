@@ -11,7 +11,7 @@ import com.cibertec.DSWII_EF_SOAP_AladanLazo.service.IProductoService;
 @Endpoint
 public class ProductoEndPoint {
 
-    private static final String NAMESPACE_URI = "http://www.cibertec.edu.pe/ws/objects";
+    private static final String NAMESPACE_URI = "http://www.cibertec.com/ws/objects";
 
     @Autowired
     private IProductoService productoService;
