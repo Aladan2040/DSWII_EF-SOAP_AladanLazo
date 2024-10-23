@@ -1,0 +1,176 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.com/ws/objects"
+           targetNamespace="http://www.cibertec.com/ws/objects"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="clientews">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productows">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="precio" type="xs:decimal" />
+            <xs:element name="stock" type="xs:int" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="proveedorws">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getClientesRequest">
+        <xs:complexType>
+            <xs:sequence />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClientesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clientes"
+                            type="tns:clientews" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClienteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClienteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" type="tns:clientews" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postClienteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" type="tns:clientews" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postClienteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" type="tns:clientews" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductosRequest">
+        <xs:complexType>
+            <xs:sequence />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="productos"
+                            type="tns:productows" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:productows" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postProductoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:productows" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postProductoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:productows" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProveedoresRequest">
+        <xs:complexType>
+            <xs:sequence />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProveedoresResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proveedores"
+                            type="tns:proveedorws" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProveedorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long" /> <!-- Cambiado de xs:int a xs:long -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProveedorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proveedor" type="tns:proveedorws" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postProveedorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proveedor" type="tns:proveedorws" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postProveedorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proveedor" type="tns:proveedorws" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
